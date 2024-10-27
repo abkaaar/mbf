@@ -1,23 +1,23 @@
 ---
-import Cta from '../components/photos/Cta.astro';
-import Faq from '../components/photos/Faq.astro';
-import Heading from '../components/photos/Heading.astro';
+// import Cta from '../components/photos/Cta.astro';
+// import Faq from '../components/photos/Faq.astro';
+// import Heading from '../components/photos/Heading.astro';
 // import photosTable from '../components/photos/photosTable.astro';
-import Layout from '../layouts/Layout.astro';
+// import Layout from '../layouts/Layout.astro';
 
-import { getCollection } from "astro:content";
+// import { getCollection } from "astro:content";
 // import BaseLayout from "../layouts/BaseLayout.astro";
-import BlogPost from "../components/BlogPost.astro";
-import { sortByDate } from "../components/sortbydate";
-const pageTitle = "Short Form";
-const allShortForm = await getCollection("short_form");
+// import BlogPost from "../components/BlogPost.astro";
+// import { sortByDate } from "../components/sortbydate";
+// const pageTitle = "Short Form";
+// const allShortForm = await getCollection("short_form");
 ---
-
+ <!--
 <Layout
   description="Find the photos plan that best fits your needs. Plans include seats, projects, support and more"
   title="photos · Stone"
 >
-  <!-- <Heading /> -->
+  <Heading /> -->
   <!-- <photosTable /> -->
   <!-- <Faq /> -->
   <!-- {
@@ -35,11 +35,11 @@ const allShortForm = await getCollection("short_form");
           positiony={post.data?.image?.positiony || ""}
         />
       ))
-  } -->
+  } 
   <Cta />
 </Layout>
 
-
+-->
 
 
 <!--  
