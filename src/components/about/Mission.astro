@@ -1,0 +1,63 @@
+---
+const stats = [
+  {
+    name: 'Schools Built in rural communities.',
+    value: '10+',
+  },
+  {
+    name: 'Students Reached with access to quality education.',
+    value: '5,000+',
+  },
+  {
+    name: 'Teachers Trained to provide innovative and inclusive education.',
+    value: '100+',
+  },
+  {
+    name: 'Awards',
+    value: "9",
+  },
+];
+---
+
+<section class="py-16 sm:py-20 bg-white dark:bg-black">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="grid gap-16 lg:grid-cols-2 lg:gap-24">
+      <img
+        class="mx-auto h-auto w-full max-w-xl rounded-3xl"
+        width="576"
+        height="864"
+        src="/assets/photo5.jpeg"
+        alt="Our experts working together"
+      />
+      <div class="flex flex-col gap-10">
+        <!-- Mission description -->
+        <div class="space-y-8 sm:space-y-12">
+          <h2 class="text-3xl font-medium tracking-tight sm:text-4xl dark:text-white text-black">Our mission</h2>
+          <div class="space-y-6">
+            <p class="dark:text-white text-black text-base sm:text-lg">
+              At Maxwell Baddu foundation, our mission is to provide access to quality education by building and sustaining schools in underserved communities across Africa. We believe that education is the most powerful tool for transforming lives, eradicating poverty, and creating sustainable change. Through our efforts, we aim to empower children and youth, giving them the skills and knowledge needed to thrive in today’s world and become future leaders in their communities.
+            </p>
+            <p class="dark:text-white text-black text-base sm:text-lg">
+              We are committed to bridging the educational gap by constructing safe, inclusive, and inspiring learning environments. Beyond building schools, we strive to ensure that each facility is equipped with the essential resources for effective learning, including textbooks, digital tools, and well-trained teachers. Our focus extends beyond the classroom to support holistic development, including providing access to water, sanitation, and renewable energy to create sustainable campuses.
+            </p>
+            <p class="dark:text-white text-black text-base sm:text-lg">
+              By focusing on long-term impact and sustainability, we envision a world where every child in Africa has the chance to build a better tomorrow, unlocking potential that will benefit individuals, families, and communities for generations to come. Together, we believe that education is not just a right but a key to unlocking boundless opportunities and brighter futures.
+            </p>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <dl class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          {
+            stats.map((stat) => (
+              <div class="border-primary-900/10 dark:border-primary-300/10 rounded-3xl border p-6">
+                <dt class="text-base dark:text-white text-black">{stat.name}</dt>
+                <dd class="text-3xl font-medium tracking-tight">{stat.value}</dd>
+              </div>
+            ))
+          }
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>

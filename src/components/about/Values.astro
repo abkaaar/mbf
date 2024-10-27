@@ -1,0 +1,59 @@
+---
+const values = [
+  [
+    {
+      ref: '01',
+      name: 'Education as a Right',
+      description:
+      'We believe that every child, regardless of background, geography, or economic status, has the right to quality education. Our commitment is to remove the barriers that prevent children in underserved communities from accessing learning opportunities. We view education as the foundation for building a more equitable and just society.'
+    },
+    {
+      ref: '02',
+      name: 'Sustainability',
+      description:
+      'Our projects are designed with sustainability in mind. Beyond constructing schools, we focus on creating eco-friendly campuses with access to clean water, renewable energy, and proper sanitation. By adopting long-term strategies, we ensure that the communities we serve can maintain the facilities and benefit from them for generations to come.'
+    },
+  ],
+  [
+    {
+      ref: '03',
+      name: 'Empowerment through Collaboration',
+      description:
+      'We understand that real change comes through partnership. We actively engage with local communities, governments, educators, and other stakeholders to co-create solutions that are culturally relevant and impactful. By empowering communities, we foster a sense of ownership and collective responsibility for the future.'
+    },
+    {
+      ref: '04',
+      name: 'Integrity and Transparency',
+      description:
+      'We are committed to operating with the highest levels of integrity and transparency. Trust is at the core of everything we do, and we strive to be accountable to our donors, partners, and the communities we serve. Through open communication and honest reporting, we ensure that every contribution creates meaningful impact.'
+    },
+  ],
+];
+---
+
+<section class="py-16 sm:py-20 bg-white dark:bg-black">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="flex flex-col gap-8 lg:gap-12">
+      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Our Values</h2>
+      <div class="grid gap-8 lg:grid-cols-2">
+        {
+          values.map((column, index) => (
+            <div class:list={['space-y-8', index === 1 && 'lg:mt-16']}>
+              {column.map((value) => (
+                <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
+                  <p class="text-sm">{value.ref}</p>
+                  <div class="flex flex-col gap-4">
+                    <h3 class="text-xl font-medium">{value.name}</h3>
+                    <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
+                      {value.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
